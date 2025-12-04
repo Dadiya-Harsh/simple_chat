@@ -1,0 +1,27 @@
+[project]
+name = "simple-chat"
+version = "0.1.0"
+description = "This is simple AI Chat system build with openai agent builder"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.123.8",
+    "openai-agents>=0.6.1",
+    "pydantic-settings>=2.12.0",
+    "uvicorn>=0.38.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Dadiya-Harsh/simple-chat"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--strict-markers --cov --no-cov-on-fail"
+testpaths = [
+    "tests",
+    "src/mypackage/tests",
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+]
